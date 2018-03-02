@@ -1,0 +1,31 @@
+{
+  "name": "bstudio-sass",
+  "version": "1.0.0",
+  "description": "Bootstrap Studio SASS Compilation Sidekick",
+  "main": "bstudio-sass.js",
+  "bin": {
+    "bstudio-sass": "bstudio-sass.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bootstrapstudio/bstudio-sass.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "studio",
+    "command",
+    "line"
+  ],
+  "author": "Zine EOOD <hi@zine.bg> (https://zine.bg/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://bootstrapstudio.io/bug-report"
+  },
+  "homepage": "https://github.com/bootstrapstudio/bstudio-sass",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
