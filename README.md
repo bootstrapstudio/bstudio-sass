@@ -1,6 +1,6 @@
 # Bootstrap Studio SASS sidekick
 
-`bstudio-sass` is a helper utility for compiling SASS in Bootstrap Studio. To use it, install it on your local machine and Bootstrap Studio will pick it up automatically when you attempt to compile SASS code in the app. It runs on Windows, MacOS and Linux.
+`bstudio-sass` is a helper utility for compiling SASS in Bootstrap Studio. To use it, install it on your local machine and configure Bootstrap Studio to know where to find it. It runs on Windows, MacOS and Linux.
 
 ## Installation
 
@@ -8,7 +8,8 @@ To install `bstudio-sass`, follow these steps:
 
 1. Install a recent version of [nodejs](https://nodejs.org/en/) for your os, if you don't have it already.
 2. Open a terminal/console window, and run this command: `npm install bstudio-sass -g`
-3. After the above is done, run this command to test if everything works: `bstudio-sass`. If you see a message that everything is installed correctly, you can start compiling SASS code in Bootstrap Studio right away. There is no need to configure anything.
+3. After the above is done, run this command to test if everything works: `bstudio-sass`. You should see a message that everything is installed correctly, and a path that you should use.
+4. Open the **File > Design Settings** dialog, and in the SASS tab paste the path to bstudio-sass that you got in the above step.
 
 ## Troubleshooting
 

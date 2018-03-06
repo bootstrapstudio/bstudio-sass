@@ -5,8 +5,18 @@ let path = require('path');
 let readline = require('readline');
 
 if (process.stdin.isTTY) {
-	console.log('bstudio-sass is Bootstrap Studio\'s sidekick for compiling SASS files.\n'+
-		'It is installed correctly and is ready for use in the app.');
+	
+	console.log('bstudio-sass is Bootstrap Studio\'s sidekick for compiling SASS files.');
+	console.log('To link this utility to Bootstrap Studio, please use the following path:');
+
+	var cmd = process.argv[1];
+
+	if (process.platform == 'win32') {
+		cmd = cmd.replace('\\node_modules\\bstudio-sass\\bstudio-sass.js', '\\bstudio-sass');
+	}
+
+	console.log(cmd);
+
 	process.exit();
 }
 
@@ -52,7 +62,7 @@ rl.on('line', function(data){
 
 			let render = sass.renderSync({
 				file: filePath,
-				data: message.files[filePath],
+				data: message.files[filePath] || ' ',
 				outputStyle: 'compressed',
 				importer: function(url, prev) {
 
@@ -109,7 +119,9 @@ rl.on('line', function(data){
 				message.jobID,
 				{
 					formatted: e.formatted,
-					file: e.file.replace(process.cwd(), '/').replace(/\\/g, '/'),
+					file: e.file ? 
+						e.file.replace(process.cwd(), '/').replace(/\\/g, '/'):
+						null,
 					line: e.line,
 					column: e.column
 				}
