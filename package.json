@@ -1,6 +1,6 @@
 {
   "name": "bstudio-sass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Bootstrap Studio SASS Compilation Sidekick",
   "main": "bstudio-sass.js",
   "bin": {
@@ -21,6 +21,7 @@
   ],
   "author": "Zine EOOD <hi@zine.bg> (https://zine.bg/)",
   "license": "MIT",
+  "engines" : { "node" : ">=8.0.0" },
   "bugs": {
     "url": "https://bootstrapstudio.io/bug-report"
   },

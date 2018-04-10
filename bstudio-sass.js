@@ -63,7 +63,7 @@ rl.on('line', function(data){
 			let render = sass.renderSync({
 				file: filePath,
 				data: message.files[filePath] || ' ',
-				outputStyle: 'compressed',
+				outputStyle: 'expanded',
 				importer: function(url, prev) {
 
 					if (/^https?:\/\//.test(url)) {
