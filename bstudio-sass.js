@@ -88,9 +88,8 @@ rl.on('line', function(data){
 						resolvedPath = underScorePath;
 					}
 
-					if (!resolvedPath in message.files) {
-						return new Error('File to import not found or unreadable: ' + url + 
-							'\nParent style sheet: ' + prev);
+					if (!(resolvedPath in message.files)) {
+						return new Error('File to import not found: ' + resolvedPath.slice(1));
 					}
 
 					return {
@@ -120,7 +119,7 @@ rl.on('line', function(data){
 				{
 					formatted: e.formatted,
 					file: e.file ? 
-						e.file.replace(process.cwd(), '/').replace(/\\/g, '/'):
+						e.file.replace(process.cwd(), '/').replace(/\\/g, '/').slice(1):
 						null,
 					line: e.line,
 					column: e.column
